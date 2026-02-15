@@ -18,9 +18,9 @@ from typing import Any
 import numpy as np
 import structlog
 
-from nexow.broker.models import Candle
-from nexow.broker.oanda import OandaClient
-from nexow.rules.interpreter import MarketSnapshot, MultiSnapshot, evaluate_rules
+from nexow_shared.broker.models import Candle
+from nexow_data.oanda import OandaClient
+from nexow_shared.rules.interpreter import MarketSnapshot, MultiSnapshot, evaluate_rules
 
 logger = structlog.get_logger(__name__)
 
