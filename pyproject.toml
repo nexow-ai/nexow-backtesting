@@ -1,0 +1,32 @@
+[project]
+name = "nexow-backtesting"
+version = "0.1.0"
+description = "Nexow backtesting engine - historical simulation and performance metrics"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+    "pandas>=2.0",
+    "numpy>=1.26",
+    "ta>=0.11",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "python-dotenv>=1.0",
+    "structlog>=24.0",
+    "nexow-shared @ git+ssh://git@github.com/nexow-ai/nexow-shared.git@main",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
